@@ -1,8 +1,5 @@
-{
-    "@context": [
-      "dtmi:iotcentral:context;2",
-      "dtmi:dtdl:context;2"
-    ],
+[
+  {
     "@id": "dtmi:Makersan:GeneratorDemo;1",
     "@type": "Interface",
     "contents": [
@@ -258,5 +255,10 @@
     ],
     "displayName": {
       "en": "Generator Demo"
-    }
+    },
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
   }
+]

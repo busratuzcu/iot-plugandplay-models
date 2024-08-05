@@ -1,0 +1,2022 @@
+[
+  {
+    "@id": "dtmi:Makersan:SensorNode:H0S0;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:std_comp;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Standard component"
+        },
+        "name": "std_comp",
+        "schema": "dtmi:makersan:sensor_node:s1000:standart_if;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:deviceinfo;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Device Information"
+        },
+        "name": "deviceinfo",
+        "schema": "dtmi:azure:DeviceManagement:DeviceInformation;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:ctrl_comp;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Control Component"
+        },
+        "name": "ctrl_comp",
+        "schema": "dtmi:makersan:sensor_node:s1000:control_if;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:AnalogInput0;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Analog Input 0"
+        },
+        "name": "AnalogInput0",
+        "schema": "dtmi:Makersan:AnalogInput;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:AnalogInput1;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Analog Input 1"
+        },
+        "name": "AnalogInput1",
+        "schema": "dtmi:Makersan:AnalogInput;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:DigitalInput0;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Digital Input 0"
+        },
+        "name": "DigitalInput0",
+        "schema": "dtmi:Makersan:DigitalInput;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:DigitalInput1;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Digital Input 1"
+        },
+        "name": "DigitalInput1",
+        "schema": "dtmi:Makersan:DigitalInput;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:DigitalOutput0;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Digital Output 0"
+        },
+        "name": "DigitalOutput0",
+        "schema": "dtmi:Makersan:DigitalOutput;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:DigitalOutput1;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Digital Output 1"
+        },
+        "name": "DigitalOutput1",
+        "schema": "dtmi:Makersan:DigitalOutput;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:CANManualMessage;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "CAN Manual Message"
+        },
+        "name": "CANManualMessage",
+        "schema": "dtmi:Makersan:CANManualMessage;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:CANRxMsg0;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "CAN Receive Message 0"
+        },
+        "name": "CANRxMsg0",
+        "schema": "dtmi:Makersan:CANReceiveMessage;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:CANTxMsg0;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "CAN Transmit Message 0"
+        },
+        "name": "CANTxMsg0",
+        "schema": "dtmi:Makersan:CANTransmitMessage;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:GeneratorDemo0;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Generator Demo 0"
+        },
+        "name": "GeneratorDemo0",
+        "schema": "dtmi:Makersan:GeneratorDemo;1"
+      },
+      {
+        "@id": "dtmi:Makersan:SensorNode:H0S0:deviceUpdate;1",
+        "@type": "Component",
+        "displayName": {
+          "en": "Device Update"
+        },
+        "name": "deviceUpdate",
+        "schema": "dtmi:azure:iot:deviceUpdateContractModel;2"
+      }
+    ],
+    "displayName": {
+      "en": "Sensor Node"
+    },
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:makersan:sensor_node:s1000:standart_if;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:standart_if:variant;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Variant"
+        },
+        "name": "variant",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:standart_if:temperature;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue",
+          "Temperature"
+        ],
+        "displayName": {
+          "en": "Temperature"
+        },
+        "name": "temperature",
+        "schema": "double",
+        "unit": "degreeCelsius",
+        "decimalPlaces": 2
+      },
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:standart_if:telemetry_interval;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Telemetry Interval"
+        },
+        "name": "telemetry_interval",
+        "schema": "double",
+        "writable": true,
+        "displayUnit": {
+          "en": "seconds"
+        }
+      }
+    ],
+    "displayName": {
+      "en": "Standard Component"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:azure:DeviceManagement:DeviceInformation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": [
+          "Property",
+          "StringValue"
+        ],
+        "description": {
+          "en": "Company name of the device manufacturer. This could be the same as the name of the original equipment manufacturer (OEM). Ex. Contoso."
+        },
+        "displayName": {
+          "en": "Manufacturer"
+        },
+        "name": "manufacturer",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@type": [
+          "Property",
+          "StringValue"
+        ],
+        "description": {
+          "en": "Device model name or ID. Ex. Surface Book 2."
+        },
+        "displayName": {
+          "en": "Device model"
+        },
+        "name": "model",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@type": [
+          "Property",
+          "StringValue"
+        ],
+        "description": {
+          "en": "Version of the software on your device. This could be the version of your firmware. Ex. 1.3.45"
+        },
+        "displayName": {
+          "en": "Software version"
+        },
+        "name": "swVersion",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@type": [
+          "Property",
+          "StringValue"
+        ],
+        "description": {
+          "en": "Name of the operating system on the device. Ex. Windows 10 IoT Core."
+        },
+        "displayName": {
+          "en": "Operating system name"
+        },
+        "name": "osName",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@type": [
+          "Property",
+          "StringValue"
+        ],
+        "description": {
+          "en": "Architecture of the processor on the device. Ex. x64 or ARM."
+        },
+        "displayName": {
+          "en": "Processor architecture"
+        },
+        "name": "processorArchitecture",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@type": [
+          "Property",
+          "StringValue"
+        ],
+        "description": {
+          "en": "Name of the manufacturer of the processor on the device. Ex. Intel."
+        },
+        "displayName": {
+          "en": "Processor manufacturer"
+        },
+        "name": "processorManufacturer",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "description": {
+          "en": "Total available storage on the device in kilobytes. Ex. 2048000 kilobytes."
+        },
+        "displayName": {
+          "en": "Total storage"
+        },
+        "name": "totalStorage",
+        "schema": "double",
+        "writable": false
+      },
+      {
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "description": {
+          "en": "Total available memory on the device in kilobytes. Ex. 256000 kilobytes."
+        },
+        "displayName": {
+          "en": "Total memory"
+        },
+        "name": "totalMemory",
+        "schema": "double",
+        "writable": false
+      }
+    ],
+    "displayName": {
+      "en": "Device Information"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:makersan:sensor_node:s1000:control_if;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:control_if:Pause;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "description": {
+          "en": "This Commands will put in pause the sensors transmission"
+        },
+        "displayName": {
+          "en": "Pause"
+        },
+        "name": "Pause",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "PauseResponse"
+          },
+          "name": "PauseResponse",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:control_if:Play;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "description": {
+          "en": "This Command will Resume the Sensors transmission"
+        },
+        "displayName": {
+          "en": "Play"
+        },
+        "name": "Play",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "PlayResponse"
+          },
+          "name": "PlayResponse",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:control_if:Reset;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "description": {
+          "en": "Reboot the board"
+        },
+        "displayName": {
+          "en": "Reset"
+        },
+        "name": "Reset",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "ResetResponse"
+          },
+          "name": "ResetResponse",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:control_if:ConfigEdit;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "description": {
+          "en": "Enter Config Edit Mode"
+        },
+        "displayName": {
+          "en": "Config Edit"
+        },
+        "name": "ConfigEdit",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "Config Edit Response"
+          },
+          "name": "ConfigEditResponse",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "displayName": {
+                  "en": "Result"
+                },
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:control_if:ConfigStore;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "description": {
+          "en": "Save Config to EEPROM"
+        },
+        "displayName": {
+          "en": "Config Store"
+        },
+        "name": "ConfigStore",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "Config Store Response"
+          },
+          "name": "ConfigStoreResponse",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "displayName": {
+                  "en": "Result"
+                },
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "displayName": {
+      "en": "Control interface"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:AnalogInput;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:AnalogInput:value;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Current Value"
+        },
+        "name": "value",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:MinMeas;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Min Measured Value"
+        },
+        "name": "MinMeas",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:MaxMeas;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Max Measured Value"
+        },
+        "name": "MaxMeas",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:MinRange;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Min Range Value"
+        },
+        "name": "MinRange",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:MaxRange;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Max Range Value"
+        },
+        "name": "MaxRange",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:type;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Sensor Type"
+        },
+        "name": "type",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:ResetMeas;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "description": {
+          "en": "Reset the Min and Max Measured Values to Current Value."
+        },
+        "displayName": {
+          "en": "Reset Min and Max Measured Values"
+        },
+        "name": "ResetMeas",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "ResetResponse"
+          },
+          "name": "ResetResponse",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "displayName": {
+      "en": "Analog Input"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:DigitalInput;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:DigitalInput:State;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "State"
+        },
+        "name": "State",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalInput:Counter;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Counter"
+        },
+        "name": "Counter",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalInput:Polarity;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Polarity"
+        },
+        "name": "Polarity",
+        "schema": {
+          "@id": "dtmi:Makersan:DigitalInput:Polarity:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:DigitalInput:Polarity:schema:Normal;1",
+              "enumValue": 0,
+              "name": "Normal"
+            },
+            {
+              "@id": "dtmi:Makersan:DigitalInput:Polarity:schema:Reversed;1",
+              "enumValue": 1,
+              "name": "Reversed"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalInput:Debounce;1",
+        "@type": [
+          "Property",
+          "Initialized",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Debounce"
+        },
+        "name": "Debounce",
+        "schema": "integer",
+        "unit": "millisecond",
+        "writable": true,
+        "initialValue": 50
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalInput:EdgeSel;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Edge Selection"
+        },
+        "name": "EdgeSel",
+        "schema": {
+          "@id": "dtmi:Makersan:DigitalInput:EdgeSel:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:DigitalInput:EdgeSel:schema:FallingEdge;1",
+              "displayName": {
+                "en": "Falling Edge"
+              },
+              "enumValue": 1,
+              "name": "FallingEdge"
+            },
+            {
+              "@id": "dtmi:Makersan:DigitalInput:EdgeSel:schema:RisingEdge;1",
+              "displayName": {
+                "en": "Rising Edge"
+              },
+              "enumValue": 2,
+              "name": "RisingEdge"
+            },
+            {
+              "@id": "dtmi:Makersan:DigitalInput:EdgeSel:schema:RisingAndFallingEdge;1",
+              "displayName": {
+                "en": "Both Rising and Falling Edge"
+              },
+              "enumValue": 3,
+              "name": "RisingAndFallingEdge"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 1
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalInput:ResetCount;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "description": {
+          "en": "Reset the Counter value."
+        },
+        "displayName": {
+          "en": "Reset Counter"
+        },
+        "name": "ResetCount",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "ResetResponse"
+          },
+          "name": "ResetResponse",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "displayName": {
+      "en": "Digital Input"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:DigitalOutput;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:DigitalOutput:State;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "State"
+        },
+        "name": "State",
+        "schema": {
+          "@id": "dtmi:Makersan:DigitalOutput:State:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:DigitalOutput:State:schema:Off;1",
+              "enumValue": 0,
+              "name": "Off"
+            },
+            {
+              "@id": "dtmi:Makersan:DigitalOutput:State:schema:On;1",
+              "enumValue": 1,
+              "name": "On"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalOutput:Polarity;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Polarity"
+        },
+        "name": "Polarity",
+        "schema": {
+          "@id": "dtmi:Makersan:DigitalOutput:Polarity:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:DigitalOutput:Polarity:schema:Normal;1",
+              "enumValue": 0,
+              "name": "Normal"
+            },
+            {
+              "@id": "dtmi:Makersan:DigitalOutput:Polarity:schema:Reversed;1",
+              "enumValue": 1,
+              "name": "Reversed"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 0
+      }
+    ],
+    "displayName": {
+      "en": "Digital Output"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:CANManualMessage;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:CANManualMessage:Data;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Data"
+        },
+        "name": "Data",
+        "schema": {
+          "@id": "dtmi:Makersan:CANManualMessage:Data:schema;1",
+          "@type": "Object",
+          "displayName": {
+            "en": "Object"
+          },
+          "fields": [
+            {
+              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D0;1",
+              "displayName": {
+                "en": "Data0"
+              },
+              "name": "D0",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D1;1",
+              "displayName": {
+                "en": "Data1"
+              },
+              "name": "D1",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D2;1",
+              "displayName": {
+                "en": "Data2"
+              },
+              "name": "D2",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D3;1",
+              "displayName": {
+                "en": "Data3"
+              },
+              "name": "D3",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D4;1",
+              "displayName": {
+                "en": "Data4"
+              },
+              "name": "D4",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D5;1",
+              "displayName": {
+                "en": "Data5"
+              },
+              "name": "D5",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D6;1",
+              "displayName": {
+                "en": "Data6"
+              },
+              "name": "D6",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D7;1",
+              "displayName": {
+                "en": "Data7"
+              },
+              "name": "D7",
+              "schema": "integer"
+            }
+          ]
+        },
+        "writable": true,
+        "initialValue": {
+          "D0": 0,
+          "D1": 0,
+          "D2": 0,
+          "D3": 0,
+          "D4": 0,
+          "D5": 0,
+          "D6": 0,
+          "D7": 0
+        }
+      },
+      {
+        "@id": "dtmi:Makersan:CANManualMessage:Len;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Length"
+        },
+        "name": "Len",
+        "schema": "integer",
+        "writable": true,
+        "maxValue": 8,
+        "minValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:CANManualMessage:DestAddr;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Destination Address"
+        },
+        "name": "DestAddr",
+        "schema": "integer",
+        "writable": true,
+        "maxValue": 255,
+        "minValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:CANManualMessage:PGN;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "PGN"
+        },
+        "name": "PGN",
+        "schema": "integer",
+        "writable": true,
+        "maxValue": 65535,
+        "minValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:CANManualMessage:DP;1",
+        "@type": [
+          "Property",
+          "NumberValue",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Data Page"
+        },
+        "name": "DP",
+        "schema": "integer",
+        "writable": true,
+        "initialValue": 0,
+        "maxValue": 1,
+        "minValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:CANManualMessage:Prio;1",
+        "@type": [
+          "Property",
+          "NumberValue",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Priority"
+        },
+        "name": "Prio",
+        "schema": "integer",
+        "writable": true,
+        "initialValue": 6,
+        "maxValue": 7,
+        "minValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:CANManualMessage:SendCANMsg;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "displayName": {
+          "en": "Send"
+        },
+        "name": "SendCANMsg",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "CANSendResponse"
+          },
+          "name": "CANSendResponse",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "displayName": {
+                  "en": "Result"
+                },
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "displayName": {
+      "en": "CAN Manual Message"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:CANReceiveMessage;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:DataMin;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Minimum Value"
+        },
+        "name": "DataMin",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:DataMax;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Maximum Value"
+        },
+        "name": "DataMax",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:Offset;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Offset"
+        },
+        "name": "Offset",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:Resolution;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Resolution"
+        },
+        "name": "Resolution",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:PGN;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "PGN"
+        },
+        "name": "PGN",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:Timeout;1",
+        "@type": [
+          "Property",
+          "NumberValue",
+          "TimeSpan"
+        ],
+        "displayName": {
+          "en": "Timeout"
+        },
+        "name": "Timeout",
+        "schema": "integer",
+        "unit": "millisecond",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:Activated;1",
+        "@type": [
+          "Property",
+          "BooleanValue"
+        ],
+        "displayName": {
+          "en": "Activated"
+        },
+        "name": "Activated",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:Cyclic;1",
+        "@type": [
+          "Property",
+          "BooleanValue"
+        ],
+        "displayName": {
+          "en": "Cyclic"
+        },
+        "name": "Cyclic",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:Checksum;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Checksum Bits"
+        },
+        "name": "Checksum",
+        "schema": {
+          "@id": "dtmi:Makersan:CANReceiveMessage:Checksum:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Checksum:schema:None;1",
+              "displayName": {
+                "en": "None"
+              },
+              "enumValue": 0,
+              "name": "None"
+            },
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Checksum:schema:n4BIT_J1939;1",
+              "displayName": {
+                "en": "4BIT_J1939"
+              },
+              "enumValue": 1,
+              "name": "n4BIT_J1939"
+            },
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Checksum:schema:n4BIT_TSC1;1",
+              "displayName": {
+                "en": "4BIT_TSC1"
+              },
+              "enumValue": 2,
+              "name": "n4BIT_TSC1"
+            },
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Checksum:schema:n8BIT_J1850;1",
+              "displayName": {
+                "en": "8BIT_J1850"
+              },
+              "enumValue": 3,
+              "name": "n8BIT_J1850"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:SrcAddr;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Source Address"
+        },
+        "name": "SrcAddr",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:Size;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Data Size"
+        },
+        "name": "Size",
+        "schema": {
+          "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:NotSet;1",
+              "displayName": {
+                "en": "Not Set"
+              },
+              "enumValue": 0,
+              "name": "NotSet"
+            },
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n1bit;1",
+              "displayName": {
+                "en": "ONE BIT"
+              },
+              "enumValue": 1,
+              "name": "n1bit"
+            },
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n2bit;1",
+              "displayName": {
+                "en": "TWO BITS"
+              },
+              "enumValue": 2,
+              "name": "n2bit"
+            },
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n4bit;1",
+              "displayName": {
+                "en": "FOUR BITS"
+              },
+              "enumValue": 3,
+              "name": "n4bit"
+            },
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n1byte;1",
+              "displayName": {
+                "en": "ONE BYTE"
+              },
+              "enumValue": 4,
+              "name": "n1byte"
+            },
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n3byte;1",
+              "displayName": {
+                "en": "TWO BYTES"
+              },
+              "enumValue": 5,
+              "name": "n3byte"
+            },
+            {
+              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n4byte;1",
+              "displayName": {
+                "en": "FOUR BYTES"
+              },
+              "enumValue": 6,
+              "name": "n4byte"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:ByteIndex;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Byte Index"
+        },
+        "name": "ByteIndex",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:BitIndex;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Bit Index"
+        },
+        "name": "BitIndex",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:StateOutRange;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "State Outside Range"
+        },
+        "name": "StateOutRange",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:InstNum;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Instance Number"
+        },
+        "name": "InstNum",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:Makersan:CANReceiveMessage:Data;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Data"
+        },
+        "name": "Data",
+        "schema": "double"
+      }
+    ],
+    "displayName": {
+      "en": "CAN Receive Message"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:CANTransmitMessage;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:Resolution;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Resolution"
+        },
+        "name": "Resolution",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:Offset;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Offset"
+        },
+        "name": "Offset",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:PGN;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "PGN"
+        },
+        "name": "PGN",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:RepetitionRate;1",
+        "@type": [
+          "Property",
+          "NumberValue",
+          "TimeSpan"
+        ],
+        "displayName": {
+          "en": "Repetition Rate"
+        },
+        "name": "RepetitionRate",
+        "schema": "integer",
+        "unit": "millisecond",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:Cyclic;1",
+        "@type": [
+          "Property",
+          "BooleanValue"
+        ],
+        "displayName": {
+          "en": "Cyclic"
+        },
+        "name": "Cyclic",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:Activated;1",
+        "@type": [
+          "Property",
+          "BooleanValue"
+        ],
+        "displayName": {
+          "en": "Activated"
+        },
+        "name": "Activated",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:Checksum;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Checksum Bits"
+        },
+        "name": "Checksum",
+        "schema": {
+          "@id": "dtmi:Makersan:CANTransmitMessage:Checksum:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Checksum:schema:None;1",
+              "displayName": {
+                "en": "None"
+              },
+              "enumValue": 0,
+              "name": "None"
+            },
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Checksum:schema:n4BIT_J1939;1",
+              "displayName": {
+                "en": "4BIT_J1939"
+              },
+              "enumValue": 1,
+              "name": "n4BIT_J1939"
+            },
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Checksum:schema:n4BIT_TSC1;1",
+              "displayName": {
+                "en": "4BIT_TSC1"
+              },
+              "enumValue": 2,
+              "name": "n4BIT_TSC1"
+            },
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Checksum:schema:n8BIT_J1850;1",
+              "displayName": {
+                "en": "8BIT_J1850"
+              },
+              "enumValue": 3,
+              "name": "n8BIT_J1850"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:Prio;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Priority"
+        },
+        "name": "Prio",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:DestAddr;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Destination Address"
+        },
+        "name": "DestAddr",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:InSrc;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Input Source"
+        },
+        "name": "InSrc",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:InNum;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Input Number"
+        },
+        "name": "InNum",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:Size;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Data Size"
+        },
+        "name": "Size",
+        "schema": {
+          "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:NotSet;1",
+              "displayName": {
+                "en": "Not Set"
+              },
+              "enumValue": 0,
+              "name": "NotSet"
+            },
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n1bit;1",
+              "displayName": {
+                "en": "ONE BIT"
+              },
+              "enumValue": 1,
+              "name": "n1bit"
+            },
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n2bit;1",
+              "displayName": {
+                "en": "TWO BITS"
+              },
+              "enumValue": 2,
+              "name": "n2bit"
+            },
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n4bit;1",
+              "displayName": {
+                "en": "FOUR BITS"
+              },
+              "enumValue": 3,
+              "name": "n4bit"
+            },
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n1byte;1",
+              "displayName": {
+                "en": "ONE BYTE"
+              },
+              "enumValue": 4,
+              "name": "n1byte"
+            },
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n3byte;1",
+              "displayName": {
+                "en": "TWO BYTES"
+              },
+              "enumValue": 5,
+              "name": "n3byte"
+            },
+            {
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n4byte;1",
+              "displayName": {
+                "en": "FOUR BYTES"
+              },
+              "enumValue": 6,
+              "name": "n4byte"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:ByteIndex;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Byte Index"
+        },
+        "name": "ByteIndex",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:BitIndex;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Bit Index"
+        },
+        "name": "BitIndex",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:InstNum;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Instance Number"
+        },
+        "name": "InstNum",
+        "schema": "integer",
+        "writable": false
+      }
+    ],
+    "displayName": {
+      "en": "CAN Transmit Message"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:GeneratorDemo;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:GeneratorDemo:TelemertyDoubleValue;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Telemerty Double Value"
+        },
+        "name": "TelemertyDoubleValue",
+        "schema": "double"
+      },
+      {
+        "@id": "dtmi:Makersan:GeneratorDemo:TelemetryIntegerValue;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Telemetry Integer Value"
+        },
+        "name": "TelemetryIntegerValue",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:GeneratorDemo:TelemetryEnumValue;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "Telemetry Enum Value"
+        },
+        "name": "TelemetryEnumValue",
+        "schema": {
+          "@id": "dtmi:Makersan:GeneratorDemo:TelemetryEnumValue:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryEnumValue:schema:Enum0;1",
+              "displayName": {
+                "en": "Enum0"
+              },
+              "enumValue": 0,
+              "name": "Enum0"
+            },
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryEnumValue:schema:Enum1;1",
+              "displayName": {
+                "en": "Enum1"
+              },
+              "enumValue": 1,
+              "name": "Enum1"
+            },
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryEnumValue:schema:Enum2;1",
+              "displayName": {
+                "en": "Enum2"
+              },
+              "enumValue": 2,
+              "name": "Enum2"
+            }
+          ],
+          "valueSchema": "integer"
+        }
+      },
+      {
+        "@id": "dtmi:Makersan:GeneratorDemo:TelemetryObjectValue;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "Telemetry Object Value"
+        },
+        "name": "TelemetryObjectValue",
+        "schema": {
+          "@id": "dtmi:Makersan:GeneratorDemo:TelemetryObjectValue:schema;1",
+          "@type": "Object",
+          "displayName": {
+            "en": "Object"
+          },
+          "fields": [
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryObjectValue:schema:ObjData0;1",
+              "displayName": {
+                "en": "ObjData0"
+              },
+              "name": "ObjData0",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryObjectValue:schema:ObjData1;1",
+              "displayName": {
+                "en": "ObjData1"
+              },
+              "name": "ObjData1",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryObjectValue:schema:ObjData2;1",
+              "displayName": {
+                "en": "ObjData2"
+              },
+              "name": "ObjData2",
+              "schema": "integer"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "dtmi:Makersan:GeneratorDemo:PropertyDoubleValue;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Property Double Value"
+        },
+        "name": "PropertyDoubleValue",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:GeneratorDemo:PropertyIntegerValue;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Property Integer Value"
+        },
+        "name": "PropertyIntegerValue",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:GeneratorDemo:PropertyEnumValue;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Property Enum Value"
+        },
+        "name": "PropertyEnumValue",
+        "schema": {
+          "@id": "dtmi:Makersan:GeneratorDemo:PropertyEnumValue:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:PropertyEnumValue:schema:Enum4;1",
+              "displayName": {
+                "en": "Enum4"
+              },
+              "enumValue": 4,
+              "name": "Enum4"
+            },
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:PropertyEnumValue:schema:Enum5;1",
+              "displayName": {
+                "en": "Enum5"
+              },
+              "enumValue": 5,
+              "name": "Enum5"
+            },
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:PropertyEnumValue:schema:Enum6;1",
+              "displayName": {
+                "en": "Enum6"
+              },
+              "enumValue": 6,
+              "name": "Enum6"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:GeneratorDemo:PropertyObjectValue;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "Property Object Value"
+        },
+        "name": "PropertyObjectValue",
+        "schema": {
+          "@id": "dtmi:Makersan:GeneratorDemo:PropertyObjectValue:schema;1",
+          "@type": "Object",
+          "displayName": {
+            "en": "Object"
+          },
+          "fields": [
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:PropertyObjectValue:schema:ObjData4;1",
+              "displayName": {
+                "en": "ObjData4"
+              },
+              "name": "ObjData4",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:PropertyObjectValue:schema:ObjData5;1",
+              "displayName": {
+                "en": "ObjData5"
+              },
+              "name": "ObjData5",
+              "schema": "integer"
+            },
+            {
+              "@id": "dtmi:Makersan:GeneratorDemo:PropertyObjectValue:schema:ObjData6;1",
+              "displayName": {
+                "en": "ObjData6"
+              },
+              "name": "ObjData6",
+              "schema": "integer"
+            }
+          ]
+        },
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:GeneratorDemo:DemoCommand;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "displayName": {
+          "en": "Demo Command"
+        },
+        "name": "DemoCommand",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "DemoCommand"
+          },
+          "name": "DemoCommand",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "displayName": {
+                  "en": "Result"
+                },
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "displayName": {
+      "en": "Generator Demo"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:azure:iot:deviceUpdateContractModel;2",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "Device Update Interface version 1"
+        },
+        "name": "deviceUpdate",
+        "schema": {
+          "@id": "dtmi:azure:iot:deviceUpdate;1",
+          "@type": "Interface"
+        }
+      }
+    ],
+    "description": {
+      "en": "Device Update Base Model version 2 supports device update interface version 1 and update manifest version 5."
+    },
+    "displayName": {
+      "en": "Device Update Base Model version 2"
+    }
+  }
+]
