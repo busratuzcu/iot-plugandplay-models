@@ -1,0 +1,79 @@
+{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:DigitalOutput;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:DigitalOutput:State;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "State"
+        },
+        "name": "State",
+        "schema": {
+          "@id": "dtmi:Makersan:DigitalOutput:State:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:DigitalOutput:State:schema:Off;1",
+              "enumValue": 0,
+              "name": "Off"
+            },
+            {
+              "@id": "dtmi:Makersan:DigitalOutput:State:schema:On;1",
+              "enumValue": 1,
+              "name": "On"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalOutput:Polarity;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Polarity"
+        },
+        "name": "Polarity",
+        "schema": {
+          "@id": "dtmi:Makersan:DigitalOutput:Polarity:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:DigitalOutput:Polarity:schema:Normal;1",
+              "enumValue": 0,
+              "name": "Normal"
+            },
+            {
+              "@id": "dtmi:Makersan:DigitalOutput:Polarity:schema:Reversed;1",
+              "enumValue": 1,
+              "name": "Reversed"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 0
+      }
+    ],
+    "displayName": {
+      "en": "Digital Output"
+    }
+  }

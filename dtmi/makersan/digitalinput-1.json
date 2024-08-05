@@ -1,0 +1,164 @@
+{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:DigitalInput;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:DigitalInput:State;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "State"
+        },
+        "name": "State",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalInput:Counter;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Counter"
+        },
+        "name": "Counter",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalInput:Polarity;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Polarity"
+        },
+        "name": "Polarity",
+        "schema": {
+          "@id": "dtmi:Makersan:DigitalInput:Polarity:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:DigitalInput:Polarity:schema:Normal;1",
+              "enumValue": 0,
+              "name": "Normal"
+            },
+            {
+              "@id": "dtmi:Makersan:DigitalInput:Polarity:schema:Reversed;1",
+              "enumValue": 1,
+              "name": "Reversed"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 0
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalInput:Debounce;1",
+        "@type": [
+          "Property",
+          "Initialized",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Debounce"
+        },
+        "name": "Debounce",
+        "schema": "integer",
+        "unit": "millisecond",
+        "writable": true,
+        "initialValue": 50
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalInput:EdgeSel;1",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "Edge Selection"
+        },
+        "name": "EdgeSel",
+        "schema": {
+          "@id": "dtmi:Makersan:DigitalInput:EdgeSel:schema;1",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:Makersan:DigitalInput:EdgeSel:schema:FallingEdge;1",
+              "displayName": {
+                "en": "Falling Edge"
+              },
+              "enumValue": 1,
+              "name": "FallingEdge"
+            },
+            {
+              "@id": "dtmi:Makersan:DigitalInput:EdgeSel:schema:RisingEdge;1",
+              "displayName": {
+                "en": "Rising Edge"
+              },
+              "enumValue": 2,
+              "name": "RisingEdge"
+            },
+            {
+              "@id": "dtmi:Makersan:DigitalInput:EdgeSel:schema:RisingAndFallingEdge;1",
+              "displayName": {
+                "en": "Both Rising and Falling Edge"
+              },
+              "enumValue": 3,
+              "name": "RisingAndFallingEdge"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "writable": true,
+        "initialValue": 1
+      },
+      {
+        "@id": "dtmi:Makersan:DigitalInput:ResetCount;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "description": {
+          "en": "Reset the Counter value."
+        },
+        "displayName": {
+          "en": "Reset Counter"
+        },
+        "name": "ResetCount",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "ResetResponse"
+          },
+          "name": "ResetResponse",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "displayName": {
+      "en": "Digital Input"
+    }
+  }

@@ -1,0 +1,11 @@
+{
+    "@id": "dtmi:Makersan:SensorNode:H0S0;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "Sensor Node"
+    },
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  }

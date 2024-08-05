@@ -1,0 +1,119 @@
+{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:AnalogInput;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:Makersan:AnalogInput:value;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Current Value"
+        },
+        "name": "value",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:MinMeas;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Min Measured Value"
+        },
+        "name": "MinMeas",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:MaxMeas;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Max Measured Value"
+        },
+        "name": "MaxMeas",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:MinRange;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Min Range Value"
+        },
+        "name": "MinRange",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:MaxRange;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Max Range Value"
+        },
+        "name": "MaxRange",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:type;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Sensor Type"
+        },
+        "name": "type",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:Makersan:AnalogInput:ResetMeas;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "description": {
+          "en": "Reset the Min and Max Measured Values to Current Value."
+        },
+        "displayName": {
+          "en": "Reset Min and Max Measured Values"
+        },
+        "name": "ResetMeas",
+        "response": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "ResetResponse"
+          },
+          "name": "ResetResponse",
+          "schema": {
+            "@type": "Object",
+            "displayName": {
+              "en": "Object"
+            },
+            "fields": [
+              {
+                "name": "Result",
+                "schema": "string"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "displayName": {
+      "en": "Analog Input"
+    }
+  }
