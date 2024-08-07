@@ -1,49 +1,13 @@
-[
-  {
-    "@id": "dtmi:Makersan:CANReceiveMessage;1",
+{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:Makersan:CANTransmitMessage;1",
     "@type": "Interface",
     "contents": [
       {
-        "@id": "dtmi:Makersan:CANReceiveMessage:DataMin;1",
-        "@type": [
-          "Property",
-          "NumberValue"
-        ],
-        "displayName": {
-          "en": "Minimum Value"
-        },
-        "name": "DataMin",
-        "schema": "double",
-        "writable": true
-      },
-      {
-        "@id": "dtmi:Makersan:CANReceiveMessage:DataMax;1",
-        "@type": [
-          "Property",
-          "NumberValue"
-        ],
-        "displayName": {
-          "en": "Maximum Value"
-        },
-        "name": "DataMax",
-        "schema": "double",
-        "writable": true
-      },
-      {
-        "@id": "dtmi:Makersan:CANReceiveMessage:Offset;1",
-        "@type": [
-          "Property",
-          "NumberValue"
-        ],
-        "displayName": {
-          "en": "Offset"
-        },
-        "name": "Offset",
-        "schema": "double",
-        "writable": true
-      },
-      {
-        "@id": "dtmi:Makersan:CANReceiveMessage:Resolution;1",
+        "@id": "dtmi:Makersan:CANTransmitMessage:Resolution;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -56,7 +20,20 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:CANReceiveMessage:PGN;1",
+        "@id": "dtmi:Makersan:CANTransmitMessage:Offset;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Offset"
+        },
+        "name": "Offset",
+        "schema": "double",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:PGN;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -69,35 +46,22 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:CANReceiveMessage:Timeout;1",
+        "@id": "dtmi:Makersan:CANTransmitMessage:RepetitionRate;1",
         "@type": [
           "Property",
           "NumberValue",
           "TimeSpan"
         ],
         "displayName": {
-          "en": "Timeout"
+          "en": "Repetition Rate"
         },
-        "name": "Timeout",
+        "name": "RepetitionRate",
         "schema": "integer",
         "unit": "millisecond",
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:CANReceiveMessage:Activated;1",
-        "@type": [
-          "Property",
-          "BooleanValue"
-        ],
-        "displayName": {
-          "en": "Activated"
-        },
-        "name": "Activated",
-        "schema": "boolean",
-        "writable": true
-      },
-      {
-        "@id": "dtmi:Makersan:CANReceiveMessage:Cyclic;1",
+        "@id": "dtmi:Makersan:CANTransmitMessage:Cyclic;1",
         "@type": [
           "Property",
           "BooleanValue"
@@ -110,7 +74,20 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:CANReceiveMessage:Checksum;1",
+        "@id": "dtmi:Makersan:CANTransmitMessage:Activated;1",
+        "@type": [
+          "Property",
+          "BooleanValue"
+        ],
+        "displayName": {
+          "en": "Activated"
+        },
+        "name": "Activated",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:Checksum;1",
         "@type": [
           "Property",
           "Initialized"
@@ -120,14 +97,14 @@
         },
         "name": "Checksum",
         "schema": {
-          "@id": "dtmi:Makersan:CANReceiveMessage:Checksum:schema;1",
+          "@id": "dtmi:Makersan:CANTransmitMessage:Checksum:schema;1",
           "@type": "Enum",
           "displayName": {
             "en": "Enum"
           },
           "enumValues": [
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Checksum:schema:None;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Checksum:schema:None;1",
               "displayName": {
                 "en": "None"
               },
@@ -135,7 +112,7 @@
               "name": "None"
             },
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Checksum:schema:n4BIT_J1939;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Checksum:schema:n4BIT_J1939;1",
               "displayName": {
                 "en": "4BIT_J1939"
               },
@@ -143,7 +120,7 @@
               "name": "n4BIT_J1939"
             },
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Checksum:schema:n4BIT_TSC1;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Checksum:schema:n4BIT_TSC1;1",
               "displayName": {
                 "en": "4BIT_TSC1"
               },
@@ -151,7 +128,7 @@
               "name": "n4BIT_TSC1"
             },
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Checksum:schema:n8BIT_J1850;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Checksum:schema:n8BIT_J1850;1",
               "displayName": {
                 "en": "8BIT_J1850"
               },
@@ -165,20 +142,59 @@
         "initialValue": 0
       },
       {
-        "@id": "dtmi:Makersan:CANReceiveMessage:SrcAddr;1",
+        "@id": "dtmi:Makersan:CANTransmitMessage:Prio;1",
         "@type": [
           "Property",
           "NumberValue"
         ],
         "displayName": {
-          "en": "Source Address"
+          "en": "Priority"
         },
-        "name": "SrcAddr",
+        "name": "Prio",
         "schema": "integer",
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:CANReceiveMessage:Size;1",
+        "@id": "dtmi:Makersan:CANTransmitMessage:DestAddr;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Destination Address"
+        },
+        "name": "DestAddr",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:InSrc;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Input Source"
+        },
+        "name": "InSrc",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:InNum;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Input Number"
+        },
+        "name": "InNum",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:Makersan:CANTransmitMessage:Size;1",
         "@type": [
           "Property",
           "Initialized"
@@ -188,14 +204,14 @@
         },
         "name": "Size",
         "schema": {
-          "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema;1",
+          "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema;1",
           "@type": "Enum",
           "displayName": {
             "en": "Enum"
           },
           "enumValues": [
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:NotSet;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:NotSet;1",
               "displayName": {
                 "en": "Not Set"
               },
@@ -203,7 +219,7 @@
               "name": "NotSet"
             },
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n1bit;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n1bit;1",
               "displayName": {
                 "en": "ONE BIT"
               },
@@ -211,7 +227,7 @@
               "name": "n1bit"
             },
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n2bit;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n2bit;1",
               "displayName": {
                 "en": "TWO BITS"
               },
@@ -219,7 +235,7 @@
               "name": "n2bit"
             },
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n4bit;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n4bit;1",
               "displayName": {
                 "en": "FOUR BITS"
               },
@@ -227,7 +243,7 @@
               "name": "n4bit"
             },
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n1byte;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n1byte;1",
               "displayName": {
                 "en": "ONE BYTE"
               },
@@ -235,7 +251,7 @@
               "name": "n1byte"
             },
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n3byte;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n3byte;1",
               "displayName": {
                 "en": "TWO BYTES"
               },
@@ -243,7 +259,7 @@
               "name": "n3byte"
             },
             {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Size:schema:n4byte;1",
+              "@id": "dtmi:Makersan:CANTransmitMessage:Size:schema:n4byte;1",
               "displayName": {
                 "en": "FOUR BYTES"
               },
@@ -257,7 +273,7 @@
         "initialValue": 0
       },
       {
-        "@id": "dtmi:Makersan:CANReceiveMessage:ByteIndex;1",
+        "@id": "dtmi:Makersan:CANTransmitMessage:ByteIndex;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -270,7 +286,7 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:CANReceiveMessage:BitIndex;1",
+        "@id": "dtmi:Makersan:CANTransmitMessage:BitIndex;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -283,20 +299,7 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:CANReceiveMessage:StateOutRange;1",
-        "@type": [
-          "Property",
-          "NumberValue"
-        ],
-        "displayName": {
-          "en": "State Outside Range"
-        },
-        "name": "StateOutRange",
-        "schema": "integer",
-        "writable": true
-      },
-      {
-        "@id": "dtmi:Makersan:CANReceiveMessage:InstNum;1",
+        "@id": "dtmi:Makersan:CANTransmitMessage:InstNum;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -307,76 +310,9 @@
         "name": "InstNum",
         "schema": "integer",
         "writable": false
-      },
-      {
-        "@id": "dtmi:Makersan:CANReceiveMessage:Data;1",
-        "@type": [
-          "Telemetry",
-          "NumberValue"
-        ],
-        "displayName": {
-          "en": "Data"
-        },
-        "name": "Data",
-        "schema": "integer"
-      },
-      {
-        "@id": "dtmi:Makersan:CANReceiveMessage:Status;1",
-        "@type": "Telemetry",
-        "displayName": {
-          "en": "Status"
-        },
-        "name": "Status",
-        "schema": {
-          "@id": "dtmi:Makersan:CANReceiveMessage:Status:schema;1",
-          "@type": "Enum",
-          "displayName": {
-            "en": "Enum"
-          },
-          "enumValues": [
-            {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Status:schema:NotAvailable;1",
-              "displayName": {
-                "en": "Not Available"
-              },
-              "enumValue": 0,
-              "name": "NotAvailable"
-            },
-            {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Status:schema:Valid;1",
-              "displayName": {
-                "en": "Valid"
-              },
-              "enumValue": 1,
-              "name": "Valid"
-            },
-            {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Status:schema:Error;1",
-              "displayName": {
-                "en": "Error"
-              },
-              "enumValue": 2,
-              "name": "Error"
-            },
-            {
-              "@id": "dtmi:Makersan:CANReceiveMessage:Status:schema:NotReady;1",
-              "displayName": {
-                "en": "Not Ready"
-              },
-              "enumValue": 3,
-              "name": "NotReady"
-            }
-          ],
-          "valueSchema": "integer"
-        }
       }
     ],
     "displayName": {
-      "en": "CAN Receive Message"
-    },
-    "@context": [
-      "dtmi:iotcentral:context;2",
-      "dtmi:dtdl:context;2"
-    ]
+      "en": "CAN Transmit Message"
+    }
   }
-]

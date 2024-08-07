@@ -1,0 +1,285 @@
+{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:azure:iot:deviceUpdate;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "agent",
+        "schema": "dtmi:azure:iot:deviceUpdate:agentMetadata;1",
+        "writable": false
+      },
+      {
+        "@type": "Property",
+        "name": "service",
+        "schema": "dtmi:azure:iot:deviceUpdate:serviceMetadata;1",
+        "writable": true
+      }
+    ],
+    "description": {
+      "en": "Device Update interface version 1 is used to send update action and metadata to devices and receive update status from devices."
+    },
+    "displayName": {
+      "en": "Device Update Interface version 1"
+    },
+    "schemas": [
+      {
+        "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:state;1",
+            "name": "state",
+            "schema": "integer"
+          },
+          {
+            "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:installedUpdateId;1",
+            "name": "installedUpdateId",
+            "schema": "string"
+          },
+          {
+            "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:workflow;1",
+            "name": "workflow",
+            "schema": {
+              "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:workflow:schema;1",
+              "@type": "Object",
+              "fields": [
+                {
+                  "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:workflow:schema:action;1",
+                  "name": "action",
+                  "schema": "integer"
+                },
+                {
+                  "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:workflow:schema:id;1",
+                  "name": "id",
+                  "schema": "string"
+                },
+                {
+                  "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:workflow:schema:retryTimestamp;1",
+                  "name": "retryTimestamp",
+                  "schema": "dateTime"
+                }
+              ]
+            }
+          },
+          {
+            "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult;1",
+            "name": "lastInstallResult",
+            "schema": {
+              "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema;1",
+              "@type": "Object",
+              "fields": [
+                {
+                  "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:resultCode;1",
+                  "name": "resultCode",
+                  "schema": "integer"
+                },
+                {
+                  "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:extendedResultCode;1",
+                  "name": "extendedResultCode",
+                  "schema": "integer"
+                },
+                {
+                  "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:resultDetails;1",
+                  "name": "resultDetails",
+                  "schema": "string"
+                },
+                {
+                  "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:stepResults;1",
+                  "name": "stepResults",
+                  "schema": {
+                    "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:stepResults:schema;1",
+                    "@type": "Map",
+                    "mapKey": {
+                      "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:stepResults:schema:mapKey:stepIndex;1",
+                      "name": "stepIndex",
+                      "schema": "string"
+                    },
+                    "mapValue": {
+                      "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:stepResults:schema:mapValue:stepResult;1",
+                      "name": "stepResult",
+                      "schema": {
+                        "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:stepResults:schema:mapValue:stepResult:schema;1",
+                        "@type": "Object",
+                        "fields": [
+                          {
+                            "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:stepResults:schema:mapValue:stepResult:schema:resultCode;1",
+                            "name": "resultCode",
+                            "schema": "integer"
+                          },
+                          {
+                            "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:stepResults:schema:mapValue:stepResult:schema:extendedResultCode;1",
+                            "name": "extendedResultCode",
+                            "schema": "integer"
+                          },
+                          {
+                            "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:lastInstallResult:schema:stepResults:schema:mapValue:stepResult:schema:resultDetails;1",
+                            "name": "resultDetails",
+                            "schema": "string"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:compatPropertyNames;1",
+            "name": "compatPropertyNames",
+            "schema": "string"
+          },
+          {
+            "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:deviceProperties;1",
+            "name": "deviceProperties",
+            "schema": {
+              "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:deviceProperties:schema;1",
+              "@type": "Map",
+              "mapKey": {
+                "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:deviceProperties:schema:mapKey:devicePropertyName;1",
+                "name": "devicePropertyName",
+                "schema": "string"
+              },
+              "mapValue": {
+                "@id": "dtmi:azure:iot:deviceUpdate:agentMetadata:deviceProperties:schema:mapValue:devicePropertyValue;1",
+                "name": "devicePropertyValue",
+                "schema": "string"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:workflow;1",
+            "name": "workflow",
+            "schema": {
+              "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:workflow:schema;1",
+              "@type": "Object",
+              "fields": [
+                {
+                  "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:workflow:schema:action;1",
+                  "name": "action",
+                  "schema": "integer"
+                },
+                {
+                  "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:workflow:schema:id;1",
+                  "name": "id",
+                  "schema": "string"
+                },
+                {
+                  "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:workflow:schema:retryTimestamp;1",
+                  "name": "retryTimestamp",
+                  "schema": "dateTime"
+                }
+              ]
+            }
+          },
+          {
+            "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:updateManifest;1",
+            "name": "updateManifest",
+            "schema": "string"
+          },
+          {
+            "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:updateManifestSignature;1",
+            "name": "updateManifestSignature",
+            "schema": "string"
+          },
+          {
+            "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:fileUrls;1",
+            "name": "fileUrls",
+            "schema": {
+              "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:fileUrls:schema;1",
+              "@type": "Map",
+              "mapKey": {
+                "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:fileUrls:schema:mapKey:fileId;1",
+                "name": "fileId",
+                "schema": "string"
+              },
+              "mapValue": {
+                "@id": "dtmi:azure:iot:deviceUpdate:serviceMetadata:fileUrls:schema:mapValue:downloadUri;1",
+                "name": "downloadUri",
+                "schema": "string"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "@id": "dtmi:azure:iot:deviceUpdate:workflowMetadata;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "action",
+            "schema": "integer"
+          },
+          {
+            "name": "id",
+            "schema": "string"
+          },
+          {
+            "name": "retryTimestamp",
+            "schema": "dateTime"
+          }
+        ]
+      },
+      {
+        "@id": "dtmi:azure:iot:deviceUpdate:installResultMetadata;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "resultCode",
+            "schema": "integer"
+          },
+          {
+            "name": "extendedResultCode",
+            "schema": "integer"
+          },
+          {
+            "name": "resultDetails",
+            "schema": "string"
+          },
+          {
+            "name": "stepResults",
+            "schema": {
+              "@type": "Map",
+              "mapKey": {
+                "comment": "The string format is step_{index}. For example, step_0, step_1, etc.",
+                "name": "stepIndex",
+                "schema": "string"
+              },
+              "mapValue": {
+                "name": "stepResult",
+                "schema": "dtmi:azure:iot:deviceUpdate:stepResultMetadata;1"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "@id": "dtmi:azure:iot:deviceUpdate:stepResultMetadata;1",
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "resultCode",
+            "schema": "integer"
+          },
+          {
+            "name": "extendedResultCode",
+            "schema": "integer"
+          },
+          {
+            "name": "resultDetails",
+            "schema": "string"
+          }
+        ]
+      }
+    ]
+  }

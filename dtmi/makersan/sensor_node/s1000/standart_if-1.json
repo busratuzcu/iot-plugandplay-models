@@ -1,0 +1,57 @@
+{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:makersan:sensor_node:s1000:standart_if;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:standart_if:variant;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Variant"
+        },
+        "name": "variant",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:standart_if:temperature;1",
+        "@type": [
+          "Telemetry",
+          "NumberValue",
+          "Temperature"
+        ],
+        "displayName": {
+          "en": "Temperature"
+        },
+        "name": "temperature",
+        "schema": "double",
+        "unit": "degreeCelsius",
+        "decimalPlaces": 2
+      },
+      {
+        "@id": "dtmi:makersan:sensor_node:s1000:standart_if:telemetry_interval;1",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Telemetry Interval"
+        },
+        "name": "telemetry_interval",
+        "schema": "double",
+        "writable": true,
+        "displayUnit": {
+          "en": "seconds"
+        }
+      }
+    ],
+    "displayName": {
+      "en": "Standard Component"
+    }
+  }

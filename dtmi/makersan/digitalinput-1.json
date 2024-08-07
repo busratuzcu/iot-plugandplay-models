@@ -1,5 +1,8 @@
-[
-  {
+{
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
     "@id": "dtmi:Makersan:DigitalInput;1",
     "@type": "Interface",
     "contents": [
@@ -157,10 +160,5 @@
     ],
     "displayName": {
       "en": "Digital Input"
-    },
-    "@context": [
-      "dtmi:iotcentral:context;2",
-      "dtmi:dtdl:context;2"
-    ]
+    }
   }
-]
