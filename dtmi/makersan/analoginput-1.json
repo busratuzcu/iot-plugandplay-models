@@ -3,11 +3,11 @@
       "dtmi:iotcentral:context;2",
       "dtmi:dtdl:context;2"
     ],
-    "@id": "dtmi:Makersan:AnalogInput;1",
+    "@id": "dtmi:makersan:AnalogInput;1",
     "@type": "Interface",
     "contents": [
       {
-        "@id": "dtmi:Makersan:AnalogInput:value;1",
+        "@id": "dtmi:makersan:AnalogInput:value;1",
         "@type": [
           "Telemetry",
           "NumberValue"
@@ -19,7 +19,7 @@
         "schema": "integer"
       },
       {
-        "@id": "dtmi:Makersan:AnalogInput:MinMeas;1",
+        "@id": "dtmi:makersan:AnalogInput:MinMeas;1",
         "@type": [
           "Telemetry",
           "NumberValue"
@@ -31,7 +31,7 @@
         "schema": "integer"
       },
       {
-        "@id": "dtmi:Makersan:AnalogInput:MaxMeas;1",
+        "@id": "dtmi:makersan:AnalogInput:MaxMeas;1",
         "@type": [
           "Telemetry",
           "NumberValue"
@@ -43,7 +43,7 @@
         "schema": "integer"
       },
       {
-        "@id": "dtmi:Makersan:AnalogInput:MinRange;1",
+        "@id": "dtmi:makersan:AnalogInput:MinRange;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -56,7 +56,7 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:AnalogInput:MaxRange;1",
+        "@id": "dtmi:makersan:AnalogInput:MaxRange;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -69,7 +69,7 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:AnalogInput:type;1",
+        "@id": "dtmi:makersan:AnalogInput:type;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -82,7 +82,7 @@
         "writable": false
       },
       {
-        "@id": "dtmi:Makersan:AnalogInput:ResetMeas;1",
+        "@id": "dtmi:makersan:AnalogInput:ResetMeas;1",
         "@type": "Command",
         "commandType": "synchronous",
         "description": {

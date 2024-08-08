@@ -3,11 +3,11 @@
       "dtmi:iotcentral:context;2",
       "dtmi:dtdl:context;2"
     ],
-    "@id": "dtmi:Makersan:CANManualMessage;1",
+    "@id": "dtmi:makersan:CANManualMessage;1",
     "@type": "Interface",
     "contents": [
       {
-        "@id": "dtmi:Makersan:CANManualMessage:Data;1",
+        "@id": "dtmi:makersan:CANManualMessage:Data;1",
         "@type": [
           "Property",
           "Initialized"
@@ -17,14 +17,14 @@
         },
         "name": "Data",
         "schema": {
-          "@id": "dtmi:Makersan:CANManualMessage:Data:schema;1",
+          "@id": "dtmi:makersan:CANManualMessage:Data:schema;1",
           "@type": "Object",
           "displayName": {
             "en": "Object"
           },
           "fields": [
             {
-              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D0;1",
+              "@id": "dtmi:makersan:CANManualMessage:Data:schema:D0;1",
               "displayName": {
                 "en": "Data0"
               },
@@ -32,7 +32,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D1;1",
+              "@id": "dtmi:makersan:CANManualMessage:Data:schema:D1;1",
               "displayName": {
                 "en": "Data1"
               },
@@ -40,7 +40,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D2;1",
+              "@id": "dtmi:makersan:CANManualMessage:Data:schema:D2;1",
               "displayName": {
                 "en": "Data2"
               },
@@ -48,7 +48,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D3;1",
+              "@id": "dtmi:makersan:CANManualMessage:Data:schema:D3;1",
               "displayName": {
                 "en": "Data3"
               },
@@ -56,7 +56,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D4;1",
+              "@id": "dtmi:makersan:CANManualMessage:Data:schema:D4;1",
               "displayName": {
                 "en": "Data4"
               },
@@ -64,7 +64,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D5;1",
+              "@id": "dtmi:makersan:CANManualMessage:Data:schema:D5;1",
               "displayName": {
                 "en": "Data5"
               },
@@ -72,7 +72,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D6;1",
+              "@id": "dtmi:makersan:CANManualMessage:Data:schema:D6;1",
               "displayName": {
                 "en": "Data6"
               },
@@ -80,7 +80,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:CANManualMessage:Data:schema:D7;1",
+              "@id": "dtmi:makersan:CANManualMessage:Data:schema:D7;1",
               "displayName": {
                 "en": "Data7"
               },
@@ -102,7 +102,7 @@
         }
       },
       {
-        "@id": "dtmi:Makersan:CANManualMessage:Len;1",
+        "@id": "dtmi:makersan:CANManualMessage:Len;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -117,7 +117,7 @@
         "minValue": 0
       },
       {
-        "@id": "dtmi:Makersan:CANManualMessage:DestAddr;1",
+        "@id": "dtmi:makersan:CANManualMessage:DestAddr;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -132,7 +132,7 @@
         "minValue": 0
       },
       {
-        "@id": "dtmi:Makersan:CANManualMessage:PGN;1",
+        "@id": "dtmi:makersan:CANManualMessage:PGN;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -147,7 +147,7 @@
         "minValue": 0
       },
       {
-        "@id": "dtmi:Makersan:CANManualMessage:DP;1",
+        "@id": "dtmi:makersan:CANManualMessage:DP;1",
         "@type": [
           "Property",
           "NumberValue",
@@ -164,7 +164,7 @@
         "minValue": 0
       },
       {
-        "@id": "dtmi:Makersan:CANManualMessage:Prio;1",
+        "@id": "dtmi:makersan:CANManualMessage:Prio;1",
         "@type": [
           "Property",
           "NumberValue",
@@ -181,7 +181,7 @@
         "minValue": 0
       },
       {
-        "@id": "dtmi:Makersan:CANManualMessage:SendCANMsg;1",
+        "@id": "dtmi:makersan:CANManualMessage:SendCANMsg;1",
         "@type": "Command",
         "commandType": "synchronous",
         "displayName": {

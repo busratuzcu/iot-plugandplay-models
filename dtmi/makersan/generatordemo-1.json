@@ -3,11 +3,11 @@
       "dtmi:iotcentral:context;2",
       "dtmi:dtdl:context;2"
     ],
-    "@id": "dtmi:Makersan:GeneratorDemo;1",
+    "@id": "dtmi:makersan:GeneratorDemo;1",
     "@type": "Interface",
     "contents": [
       {
-        "@id": "dtmi:Makersan:GeneratorDemo:TelemertyDoubleValue;1",
+        "@id": "dtmi:makersan:GeneratorDemo:TelemertyDoubleValue;1",
         "@type": [
           "Telemetry",
           "NumberValue"
@@ -19,7 +19,7 @@
         "schema": "double"
       },
       {
-        "@id": "dtmi:Makersan:GeneratorDemo:TelemetryIntegerValue;1",
+        "@id": "dtmi:makersan:GeneratorDemo:TelemetryIntegerValue;1",
         "@type": [
           "Telemetry",
           "NumberValue"
@@ -31,21 +31,21 @@
         "schema": "integer"
       },
       {
-        "@id": "dtmi:Makersan:GeneratorDemo:TelemetryEnumValue;1",
+        "@id": "dtmi:makersan:GeneratorDemo:TelemetryEnumValue;1",
         "@type": "Telemetry",
         "displayName": {
           "en": "Telemetry Enum Value"
         },
         "name": "TelemetryEnumValue",
         "schema": {
-          "@id": "dtmi:Makersan:GeneratorDemo:TelemetryEnumValue:schema;1",
+          "@id": "dtmi:makersan:GeneratorDemo:TelemetryEnumValue:schema;1",
           "@type": "Enum",
           "displayName": {
             "en": "Enum"
           },
           "enumValues": [
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryEnumValue:schema:Enum0;1",
+              "@id": "dtmi:makersan:GeneratorDemo:TelemetryEnumValue:schema:Enum0;1",
               "displayName": {
                 "en": "Enum0"
               },
@@ -53,7 +53,7 @@
               "name": "Enum0"
             },
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryEnumValue:schema:Enum1;1",
+              "@id": "dtmi:makersan:GeneratorDemo:TelemetryEnumValue:schema:Enum1;1",
               "displayName": {
                 "en": "Enum1"
               },
@@ -61,7 +61,7 @@
               "name": "Enum1"
             },
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryEnumValue:schema:Enum2;1",
+              "@id": "dtmi:makersan:GeneratorDemo:TelemetryEnumValue:schema:Enum2;1",
               "displayName": {
                 "en": "Enum2"
               },
@@ -73,21 +73,21 @@
         }
       },
       {
-        "@id": "dtmi:Makersan:GeneratorDemo:TelemetryObjectValue;1",
+        "@id": "dtmi:makersan:GeneratorDemo:TelemetryObjectValue;1",
         "@type": "Telemetry",
         "displayName": {
           "en": "Telemetry Object Value"
         },
         "name": "TelemetryObjectValue",
         "schema": {
-          "@id": "dtmi:Makersan:GeneratorDemo:TelemetryObjectValue:schema;1",
+          "@id": "dtmi:makersan:GeneratorDemo:TelemetryObjectValue:schema;1",
           "@type": "Object",
           "displayName": {
             "en": "Object"
           },
           "fields": [
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryObjectValue:schema:ObjData0;1",
+              "@id": "dtmi:makersan:GeneratorDemo:TelemetryObjectValue:schema:ObjData0;1",
               "displayName": {
                 "en": "ObjData0"
               },
@@ -95,7 +95,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryObjectValue:schema:ObjData1;1",
+              "@id": "dtmi:makersan:GeneratorDemo:TelemetryObjectValue:schema:ObjData1;1",
               "displayName": {
                 "en": "ObjData1"
               },
@@ -103,7 +103,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:TelemetryObjectValue:schema:ObjData2;1",
+              "@id": "dtmi:makersan:GeneratorDemo:TelemetryObjectValue:schema:ObjData2;1",
               "displayName": {
                 "en": "ObjData2"
               },
@@ -114,7 +114,7 @@
         }
       },
       {
-        "@id": "dtmi:Makersan:GeneratorDemo:PropertyDoubleValue;1",
+        "@id": "dtmi:makersan:GeneratorDemo:PropertyDoubleValue;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -127,7 +127,7 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:GeneratorDemo:PropertyIntegerValue;1",
+        "@id": "dtmi:makersan:GeneratorDemo:PropertyIntegerValue;1",
         "@type": [
           "Property",
           "NumberValue"
@@ -140,21 +140,21 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:GeneratorDemo:PropertyEnumValue;1",
+        "@id": "dtmi:makersan:GeneratorDemo:PropertyEnumValue;1",
         "@type": "Property",
         "displayName": {
           "en": "Property Enum Value"
         },
         "name": "PropertyEnumValue",
         "schema": {
-          "@id": "dtmi:Makersan:GeneratorDemo:PropertyEnumValue:schema;1",
+          "@id": "dtmi:makersan:GeneratorDemo:PropertyEnumValue:schema;1",
           "@type": "Enum",
           "displayName": {
             "en": "Enum"
           },
           "enumValues": [
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:PropertyEnumValue:schema:Enum4;1",
+              "@id": "dtmi:makersan:GeneratorDemo:PropertyEnumValue:schema:Enum4;1",
               "displayName": {
                 "en": "Enum4"
               },
@@ -162,7 +162,7 @@
               "name": "Enum4"
             },
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:PropertyEnumValue:schema:Enum5;1",
+              "@id": "dtmi:makersan:GeneratorDemo:PropertyEnumValue:schema:Enum5;1",
               "displayName": {
                 "en": "Enum5"
               },
@@ -170,7 +170,7 @@
               "name": "Enum5"
             },
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:PropertyEnumValue:schema:Enum6;1",
+              "@id": "dtmi:makersan:GeneratorDemo:PropertyEnumValue:schema:Enum6;1",
               "displayName": {
                 "en": "Enum6"
               },
@@ -183,21 +183,21 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:GeneratorDemo:PropertyObjectValue;1",
+        "@id": "dtmi:makersan:GeneratorDemo:PropertyObjectValue;1",
         "@type": "Property",
         "displayName": {
           "en": "Property Object Value"
         },
         "name": "PropertyObjectValue",
         "schema": {
-          "@id": "dtmi:Makersan:GeneratorDemo:PropertyObjectValue:schema;1",
+          "@id": "dtmi:makersan:GeneratorDemo:PropertyObjectValue:schema;1",
           "@type": "Object",
           "displayName": {
             "en": "Object"
           },
           "fields": [
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:PropertyObjectValue:schema:ObjData4;1",
+              "@id": "dtmi:makersan:GeneratorDemo:PropertyObjectValue:schema:ObjData4;1",
               "displayName": {
                 "en": "ObjData4"
               },
@@ -205,7 +205,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:PropertyObjectValue:schema:ObjData5;1",
+              "@id": "dtmi:makersan:GeneratorDemo:PropertyObjectValue:schema:ObjData5;1",
               "displayName": {
                 "en": "ObjData5"
               },
@@ -213,7 +213,7 @@
               "schema": "integer"
             },
             {
-              "@id": "dtmi:Makersan:GeneratorDemo:PropertyObjectValue:schema:ObjData6;1",
+              "@id": "dtmi:makersan:GeneratorDemo:PropertyObjectValue:schema:ObjData6;1",
               "displayName": {
                 "en": "ObjData6"
               },
@@ -225,7 +225,7 @@
         "writable": true
       },
       {
-        "@id": "dtmi:Makersan:GeneratorDemo:DemoCommand;1",
+        "@id": "dtmi:makersan:GeneratorDemo:DemoCommand;1",
         "@type": "Command",
         "commandType": "synchronous",
         "displayName": {

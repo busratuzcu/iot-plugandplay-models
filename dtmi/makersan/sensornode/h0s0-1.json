@@ -1,9 +1,9 @@
 {
-    "@id": "dtmi:Makersan:SensorNode:H0S0;1",
+    "@id": "dtmi:makersan:sensornode:H0S0;1",
     "@type": "Interface",
     "contents": [
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:std_comp;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:std_comp;1",
         "@type": "Component",
         "displayName": {
           "en": "Standard component"
@@ -12,7 +12,7 @@
         "schema": "dtmi:makersan:sensor_node:s1000:standart_if;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:deviceinfo;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:deviceinfo;1",
         "@type": "Component",
         "displayName": {
           "en": "Device Information"
@@ -21,7 +21,7 @@
         "schema": "dtmi:azure:DeviceManagement:DeviceInformation;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:ctrl_comp;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:ctrl_comp;1",
         "@type": "Component",
         "displayName": {
           "en": "Control Component"
@@ -30,97 +30,97 @@
         "schema": "dtmi:makersan:sensor_node:s1000:control_if;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:AnalogInput0;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:AnalogInput0;1",
         "@type": "Component",
         "displayName": {
           "en": "Analog Input 0"
         },
         "name": "AnalogInput0",
-        "schema": "dtmi:Makersan:AnalogInput;1"
+        "schema": "dtmi:makersan:AnalogInput;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:AnalogInput1;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:AnalogInput1;1",
         "@type": "Component",
         "displayName": {
           "en": "Analog Input 1"
         },
         "name": "AnalogInput1",
-        "schema": "dtmi:Makersan:AnalogInput;1"
+        "schema": "dtmi:makersan:AnalogInput;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:DigitalInput0;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:DigitalInput0;1",
         "@type": "Component",
         "displayName": {
           "en": "Digital Input 0"
         },
         "name": "DigitalInput0",
-        "schema": "dtmi:Makersan:DigitalInput;1"
+        "schema": "dtmi:makersan:DigitalInput;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:DigitalInput1;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:DigitalInput1;1",
         "@type": "Component",
         "displayName": {
           "en": "Digital Input 1"
         },
         "name": "DigitalInput1",
-        "schema": "dtmi:Makersan:DigitalInput;1"
+        "schema": "dtmi:makersan:DigitalInput;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:DigitalOutput0;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:DigitalOutput0;1",
         "@type": "Component",
         "displayName": {
           "en": "Digital Output 0"
         },
         "name": "DigitalOutput0",
-        "schema": "dtmi:Makersan:DigitalOutput;1"
+        "schema": "dtmi:makersan:DigitalOutput;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:DigitalOutput1;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:DigitalOutput1;1",
         "@type": "Component",
         "displayName": {
           "en": "Digital Output 1"
         },
         "name": "DigitalOutput1",
-        "schema": "dtmi:Makersan:DigitalOutput;1"
+        "schema": "dtmi:makersan:DigitalOutput;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:CANManualMessage;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:CANManualMessage;1",
         "@type": "Component",
         "displayName": {
           "en": "CAN Manual Message"
         },
         "name": "CANManualMessage",
-        "schema": "dtmi:Makersan:CANManualMessage;1"
+        "schema": "dtmi:makersan:CANManualMessage;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:CANRxMsg0;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:CANRxMsg0;1",
         "@type": "Component",
         "displayName": {
           "en": "CAN Receive Message 0"
         },
         "name": "CANRxMsg0",
-        "schema": "dtmi:Makersan:CANReceiveMessage;1"
+        "schema": "dtmi:makersan:CANReceiveMessage;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:CANTxMsg0;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:CANTxMsg0;1",
         "@type": "Component",
         "displayName": {
           "en": "CAN Transmit Message 0"
         },
         "name": "CANTxMsg0",
-        "schema": "dtmi:Makersan:CANTransmitMessage;1"
+        "schema": "dtmi:makersan:CANTransmitMessage;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:GeneratorDemo0;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:GeneratorDemo0;1",
         "@type": "Component",
         "displayName": {
           "en": "Generator Demo 0"
         },
         "name": "GeneratorDemo0",
-        "schema": "dtmi:Makersan:GeneratorDemo;1"
+        "schema": "dtmi:makersan:GeneratorDemo;1"
       },
       {
-        "@id": "dtmi:Makersan:SensorNode:H0S0:deviceUpdate;1",
+        "@id": "dtmi:makersan:sensornode:H0S0:deviceUpdate;1",
         "@type": "Component",
         "displayName": {
           "en": "Device Update"
