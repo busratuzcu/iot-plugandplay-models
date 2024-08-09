@@ -1,6 +1,7 @@
 {
     "@id": "dtmi:makersan:sensornode:H0S0;1",
     "@type": "Interface",
+    "extends": ["dtmi:azure:iot:deviceUpdate;1"],
     "contents": [
       {
         "@id": "dtmi:makersan:sensornode:H0S0:std_comp;1",
