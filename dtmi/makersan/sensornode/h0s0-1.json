@@ -119,15 +119,6 @@
         },
         "name": "GeneratorDemo0",
         "schema": "dtmi:makersan:GeneratorDemo;1"
-      },
-      {
-        "@id": "dtmi:makersan:sensornode:H0S0:deviceUpdate;1",
-        "@type": "Component",
-        "displayName": {
-          "en": "Device Update"
-        },
-        "name": "deviceUpdate",
-        "schema": "dtmi:azure:iot:deviceUpdate;1"
       }
     ],
     "displayName": {
